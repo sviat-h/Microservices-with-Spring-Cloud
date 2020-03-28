@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: profile-service
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: config-server
+        skipSslValidation: true
+      fail-fast: true
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    fetch-registry: false
+    register-with-eureka: true
